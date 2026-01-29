@@ -31,11 +31,11 @@ def compute_average(event):
         #Conditionals were added, such as if elif and else statements.
         if average == 100:
             result = "No way..."
-        elif average > 90.99 and average <99.99:
+        elif average > 89.99 and average <99.99:
             result = "Pretty good"
-        elif average > 85.99 and average <89.99:
+        elif average > 84.99 and average <89.99:
             result = "Pass"
-        elif average > 75.99 and average < 84.99:
+        elif average > 74.99 and average < 84.99:
             result = "Passed but try harder"
         else:
             result = "Trying to fail on purpose?"
@@ -47,3 +47,4 @@ def compute_average(event):
         document.getElementById("average").innerText = "—"
 
         document.getElementById("result").innerText = "Use numbers smh"
+
