@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Average Finder</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url("anko.png") no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.5), rgba(128, 0, 128, 0.5));
+            padding: 30px;
+            border-radius: 12px;
+            width: 350px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+            color: #fff;
+            position: relative;
+        }
+
+        .box h2 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: rgba(52, 152, 219, 0.9);
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgba(41, 128, 185, 0.9);
+        }
+
+        p {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        #average, #result {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">   
+        <h2>Simple Average Finder</h2>
+
+        <p>Math:</p>
+        <input id="score1" type="text">
+
+        <p>Science:</p>
+        <input id="score2" type="text">
+
+        <p>English:</p>
+        <input id="score3" type="text">
+
+        <button py-click="compute_average">Compute</button>
+
+        <p>Average: <span id="average"></span></p>
+        <p>Passed? <span id="result"></span></p>
+    </div>
+
+    <script type="py" src="main.py"></script>
+</body>
+</html>
